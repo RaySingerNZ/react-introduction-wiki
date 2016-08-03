@@ -1,4 +1,6 @@
-# Component Props
+```
+git checkout step-3
+```
 
 Components have what are called `props` which look a lot like HTML attributes except are camel case
 instead of snake case. For example
