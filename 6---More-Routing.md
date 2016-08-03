@@ -1,5 +1,3 @@
-# More Routing
-
 ```
 git checkout step-6
 ```
