@@ -1,4 +1,6 @@
-# Project Setup
+```
+git checkout step-0
+```
 
 This project has been setup using the [Create React App](https://github.com/facebookincubator/create-react-app)
 to keep it very simple and shows off the basic features of [React](https://facebook.github.io/react/) 
