@@ -4,6 +4,8 @@ This project has been setup using the [Create React App](https://github.com/face
 to keep it very simple and shows off the basic features of [React](https://facebook.github.io/react/) 
 and [React Router](https://github.com/reactjs/react-router).
 
+Make sure you have followed the instructions about [getting started in the readme here](https://github.com/justsayno/react-introduction)
+
 ## Introduction
 
 We are going to start with an html verion of the final simple showcase of 
