@@ -1,5 +1,3 @@
-# Main Navigation
-
 ```
 git checkout step-4
 ```
