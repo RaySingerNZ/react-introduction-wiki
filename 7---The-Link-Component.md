@@ -1,5 +1,3 @@
-## Using the Link component
-
 ```
 git checkout step-7
 ```
