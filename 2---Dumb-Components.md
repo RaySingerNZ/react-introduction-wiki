@@ -1,5 +1,3 @@
-# Our first 'dumb' component
-
 ```
 git checkout step-2
 ```
