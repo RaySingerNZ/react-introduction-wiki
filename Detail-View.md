@@ -1,5 +1,3 @@
-# Detail View
-
 Now we will tie up the whole thing by make this single view and the link to it work. Before
 we look at the single view notice how the LocationCard component has been updated build up the
 link path dynamically using the locations id:
