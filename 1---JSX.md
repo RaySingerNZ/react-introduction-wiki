@@ -1,4 +1,4 @@
-** A lot of people get put off by React's use of JSX so I thought I would quickly give an introduction to it before we get into the building our first React application. **
+**A lot of people get put off by React's use of JSX so I thought I would quickly give an introduction to it before we get into the building our first React application.**
 
 React uses an extended version of JavaScript called JSX. It basically just lets you put html-like markup
 into your JavaScript. Where other frameworks bring JavaScipt to HTML React bring HTML to JavaScript.
