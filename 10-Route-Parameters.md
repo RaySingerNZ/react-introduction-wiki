@@ -41,19 +41,24 @@ as well as added a constructor to the Component class.
 ``` javascript
 constructor({params}){
     super()
+    const employee = getEmployee(params.employeeId)
     this.state = {
-        employee: getEmployee(params.employeeId)
+        employee: employee
     }
 }
 ```
 
 Here I am getting the `params` object from the props passed into the component. This params is an object hash representation
-of the parameters in the path of the route. In this case we have `employeeId` as a paraemeter set in the route pate `path='employee/:employeeId'`.
+of the parameters in the path of the route. In this case we have `employeeId` as a paraemeter set in the route pate `path='employee/:employeeId'`. I am
+also modifying the components state.
 
 ## Component state
 
-Each class based component (not pure functional stateless ones) has its own local isolated state. You can access this state via `this.state`. In the above example
-I am setting the state equal to an object that has a key `employee` and that is set to the return value of `getEmployee` using the `employeeId` param from the route. In a 
+Each class based component (not pure functional stateless ones) has its own local isolated state. You can access this state via `this.state`. The correct place to set initial
+state is as I have in the contructor. If you want to change it anwhere else you should use the `this.setState` function and not directly access to the state. application
+state is a big topic and this tutorial doesn't really delve into it much, just enough to show you how React works.
+
+In the above example I am setting the state equal to an object that has a key `employee` and that is set to the return value of `getEmployee` using the `employeeId` param from the route. In a 
 more serious application you would use a state management system like [Redux](https://github.com/reactjs/redux) to manage this but I am using a mock API to make the example clearer.
 
 Inside my render function I use the object deconstructor to get all the required fields out of `this.state.employee` that was set in the components contructor. This profile 
@@ -67,8 +72,9 @@ import { getEmployee } from '../api/employees'
 class EmployeeProfile extends Component {
     constructor({params}){
         super()
+        const employee = getEmployee(params.employeeId)
         this.state = {
-            employee: getEmployee(params.employeeId)
+            employee: employee
         }
     }
     render(){
