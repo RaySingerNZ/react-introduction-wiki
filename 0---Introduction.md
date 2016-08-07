@@ -1,4 +1,4 @@
-I created tutorial using the [Create React App](https://github.com/facebookincubator/create-react-app),
+I created thistutorial using the [Create React App](https://github.com/facebookincubator/create-react-app),
 its is a introduction to the main features of [React](https://facebook.github.io/react/) 
 and [React Router](https://github.com/reactjs/react-router).
 
