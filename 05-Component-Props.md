@@ -1,5 +1,5 @@
 ```
-git checkout step-3
+git checkout step-5
 ```
 
 Components have what are called `props` which is how you can pass state around between your components. They look a lot like HTML attributes but are camel case
@@ -56,63 +56,91 @@ const MyComponent = ({myProp, myOtherProp}) => (
 
 ```
 
-As you can see you can render values from variables by putting them insdie `{}`'s using the same syntax as
+As you can see above you can render values from variables by putting them insdie `{}`'s using the same syntax as
 [Tempalte Literals in es2015](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Template_literals). 
 This can be seen in the above examples and in our app in the `EmployeeListItem` component:
 
 ``` javascript
 
-import React, { PropTypes } from 'react'
-
-const LocationCard = ({location}) => (
-    <div className="col s12 m6">
-        <div className="card">
-            <div className="card-image">
-                <img src={location.images.square} alt={location.name}/>
-                <span className="card-title">{location.name}</span>
-            </div>
-            <div className="card-content">
-                <p>{location.shortDescription}</p>
-            </div>
-            <div className="card-action">
-                <a className="btn" href="#">Read more</a>
-            </div>
-        </div>
-    </div>
+const EmployeeListItem = ({employee}) => (
+    <li className="collection-item avatar">
+        <img src={employee.avatar} alt={employee.name} className="circle" />
+        <span className="title">{employee.firstName} {employee.lastName}</span>
+        <p>{employee.role} <br/>
+        {employee.team}
+        </p>
+        <a href="#" className="secondary-content btn black">
+            <i className="material-icons left">description</i>
+            View C.V.
+        </a>
+    </li>
 )
 
-LocationCard.propTypes = { 
+```
+
+## PropTypes
+
+```
+git checkout step-5-1
+```
+
+React has a utlity called `PropTypes` which can be used to define what a component expects to get as `props`. This can be JavaScript primatives like `string, object, number`
+or they can be 'shapes' which are contructed using object literals and the function `PropTypes.shapeOf()`. You can also make props required using `isRequire()`. This tutorial 
+won't go into great detail on PropTypes but they are very powerful and word pointing out.
+
+You can add PropTypes to any kind of component (function component, class component etc). This is how I have added it to my `EmployeeListItem` component:
+
+``` javascript
+import React, { PropTypes } from 'react'
+
+const EmployeeListItem = ({employee}) => (
+    <li className="collection-item avatar">
+        <img src={employee.avatar} alt={employee.name} className="circle" />
+        <span className="title">{employee.firstName} {employee.lastName}</span>
+        <p>{employee.role} <br/>
+        {employee.team}
+        </p>
+        <a href="#" className="secondary-content btn black">
+            <i className="material-icons left">description</i>
+            View C.V.
+        </a>
+    </li>
+)
+
+EmployeeListItem.propTypes = { 
     location: PropTypes.object.isRequired
 }
 
-export default LocationCard
-
+export default EmployeeListItem
 ```
 
-You can also see above the use of `PropTypes` which is part of the core React library and allows you 
-to define what primative types or define shapes of the props being passed into your component.
-
 In this example I have sat that there will be an `object` and i have also defined that is required. If the 
-component doesn't recieve the prop or its the wrong type/shape then an error will show in the console.
+component doesn't recieve the prop or its the wrong type/shape then an error will show in the browser console.
+
+## Passing the props in
+
+In the `src/App.js` file I have added a line to import a mock API for getting my employee data. We can pass the employee data down
+through props like this:
+
+``` javascript
+<ul className="collection">
+    <EmployeeListItem employee={employees[0]} />
+</ul>
+```
 
 ## Multiple Locations
 
-Also now in `src/App.js` imported a simple mock API from `src/location` which means I have an array of 
-locations available in my `container` component `App`.
+In `step-5` I was only showing one employee, in `step-5-1` I have made use of the es2015 `array.map()` function
+to loop through each item in the employee and render an `EmployeeListItem`.
 
-Since React is just JavaScript we can use plain old vanila JavaScript to do things like loop through our array. For example
-to show a LocationCard for each item in the location array I can do this:
-
-```
-<div className="container main-content">      
-    <div className="row">
-        {locations.map((location) => {
-        return <LocationCard key={location.id} location={location} />
-        })}
-    </div>
-</div>
+``` javascript
+<ul className="collection">
+    {employees.map((employee) => {
+    return <EmployeeListItem key={employee.id} employee={employee} />
+    })}
+</ul>
 ```
 
-Notice how I have added a `key` prop to my LocationCard component. This is an internal React thing that allows it to
+Notice how I have added a `key` prop to my LocationCard component. This is an internal React requirement that allows it to
 more efficiently track changes in the state of your application. It just needs to be a unique identifier for each
 item in the collection.
