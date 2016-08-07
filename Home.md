@@ -1,8 +1,7 @@
 This wiki and repository has been craeted as an introduction to the main features of [React](https://facebook.github.io/react/) 
 and [React Router](https://github.com/reactjs/react-router). It was created using the [Create React App](https://github.com/facebookincubator/create-react-app)
 
-If you have not already and wish to code along follow the [getting started guide](https://github.com/justsayno/react-introduction)
-in the readme [found here](https://github.com/justsayno/react-introduction).
+If you have not already and wish to code along follow the [instructions found in the readme](https://github.com/justsayno/react-introduction).
 
 You can follow along the code changes in each step on your local machine by cloning the repository and checkout out the 
 branch that corresponds to the step in the tutorial. For example to go to the begining run the follwoing in a command window:
@@ -40,12 +39,12 @@ React-Introduction/
  │   │
  |   ├──images/         * The images for the app
  │   │  
- |   └──index.js        * The entry point to our app
+ |   └──index.js        * The entry point to the app
  |
- ├──Static/             * The static HTML that we start with
+ ├──Static/             * The static HTML that I have started with
  │
  |
- ├──Index.html          * The html page our React app is being rendered 
+ ├──Index.html          * The html page the React app is being rendered 
  |
  └──....                * Project setup related files
 ```
