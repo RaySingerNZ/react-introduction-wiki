@@ -10,8 +10,7 @@ Make sure you have followed the instructions about [getting started in the readm
 
 ## Introduction
 
-We are going to start with an html verion of the final simple showcase of 
-scenic New Zealand locations displayed using [MaterializeCss](http://materializecss.com/).
+We are going to start with an html version of an app that is designed to showcase a software vendor's employees skills and  the projects they have been involved in. [MaterializeCss](http://materializecss.com/).
 
 To have a look at this run the command
 
@@ -20,7 +19,7 @@ npm run static
 ```
 
 This will launch your browser and you can see the static version of the site. This is a simple master-detail
-design where you can click through to see more information about the locations.
+design where you can click through to see more information about the employee. In our static version there is only one of the employee details that actually works but you can see the design and layout of the app.
 
 ## Coding along
 
@@ -40,18 +39,14 @@ React-Introduction/
  |   ├──api/            * Simple mock api for location data
  │   │
  |   ├──images/         * The images for the site
- │   │ 
- |   ├──App.css/        * The main stylesheet for the app
  │   │  
- |   ├──App.js/         * The root app component
- │   │  
- |   └──index.js/       * The entry point to our application where we bootstrap
+ |   └──index.js       * The entry point to our application where we bootstrap
  |
  ├──Static/             * The static HTML that we start with
  │   │ 
  |   └──...             * The root entry file for the application
  |
- └──....                * Tests for the application
+ └──....                * Project setup related files
 ```
 
 ## The Root Component
