@@ -1,4 +1,6 @@
-Following on from our last step we have now introduced our first React Component. Our root basic component looks like this:
+Following on from our last step we have now introduced our first React Component. React applications are built up of a variety of nested Components and their HTML. It is a component oriented UI framework.
+
+Our root basic component looks like this:
 
 ``` jsx
 
