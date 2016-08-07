@@ -19,7 +19,7 @@ To have a look at this run the command
 npm run static
 ```
 
-This will launch your browser and you can see the static version of hte site. This is a simple master-detail
+This will launch your browser and you can see the static version of the site. This is a simple master-detail
 design where you can click through to see more information about the locations.
 
 ## Coding along
@@ -54,58 +54,43 @@ React-Introduction/
  └──....                * Tests for the application
 ```
 
-## Our first component
+## The Root Component
 
-Our root basic component looks like this:
+In the application there is a file `src/index.js` where our application is bootstrapped. Although (as explained later) React does not use HTML templates we do need to tell React where in our `index.html` file we would like to render our app.
 
-``` jsx
+This is done in using the `ReactDOM` library which is allows React components to use the DOM as a render target. If you look in index.js you will see the following:
 
-import React, { Component } from 'react'
-import './App.css'
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-         
-      </div>
-    )
-  }
-}
-
-```
-
-This is simply a class that extends the React class [Component](https://facebook.github.io/react/docs/component-api.html).
-At the top we are importing the React library as well as using es2015's new [destructuring](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-to get a reference the Component class at the same time.
-
-Components are simple classes that have various life cycle events in the process that React
-goes through when state changes and html is rendered. The also have a `render()` function
-which is where you put your JSX that represents the HTML and components that make up your 
-app.
-
-### Wiring up our app
-
-Building React apps is a process of making components and nesting them within one another to create
-a full application. But at the top level you need to do some plubming to att
-
-In our `index.js` file we import the core React library, the ReactDom library and the root `App`
-component from our file `App.js`. We then use the function `ReactDom.render()` which takes a 
-single React component and 
-
-``` jsx
-
+``` javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
 
 ReactDOM.render(
-  <App />,
+  <div className="App">
+    Hello World!
+  </div>,
   document.getElementById('root')
 )
-
 ```
 
-When your app if bundled up using the `npm start` command the entry point is this file which mounts your
-root component (in this call `<App />`) into the select DOM node on the page.
+First we have imported both React (this must be in scope if using and JSX) and ReactDOM. Then we have called the [`ReactDOM.render()`](https://facebook.github.io/react/blog/2015/10/01/react-render-and-top-level-api.html) method. This method takes as a first argument a single component or HTML node and as a second argument the HTML DOM element that the app is to be rendered in. 
 
+In this case we are telling it to render a div with "Hello World!" inside it into the element that has an `id` of `root`.  In `index.html` we have this element:
+
+``` html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+If you run `npm start` from your command line then you will see this render as a blank page with the "Hello World!" Message at the top left, just like a normal HTML page.
+
+This should reload when you make changes or switch branches but sometimes the `create-react-app` build configuration doesn't work and you need to restart it. There are better build systems (or custom ones) but I've used this to keep the noise to a minimum and just focus on React and React Router.
