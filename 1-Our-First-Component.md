@@ -2,20 +2,10 @@ Following on from our last step we have now introduced our first React Component
 
 ``` jsx
 
-import React, { Component } from 'react'
-import './App.css'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-         
-      </div>
-    )
-  }
-}
 
 ```
+Instead of rendering our `Hello World` content directly in our `ReactDOM.render()` call we have now 
 
 This is simply a class that extends the React class [Component](https://facebook.github.io/react/docs/component-api.html).
 At the top we are importing the React library as well as using es2015's new [destructuring](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
