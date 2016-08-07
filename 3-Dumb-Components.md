@@ -2,14 +2,14 @@
 git checkout step-2
 ```
 
-In React there is a general concept of having 'dumb' and 'smart' compeonents. Or 'container' and 'presentational'
-components. The distinction is in their relationship with the state of the applicaiton.
+In React there is a general concept of having 'dumb' and 'smart' compeonents, or 'container' and 'presentational'
+components. The distinction is in their relationship with the state of the application.
 
-**Container** components are responsible for orchstrating and retrieving the data. While **presentational**
+**Container** components are responsible for orchestrating and retrieving the data. While **presentation**
 components are simple pure functions that render UI elements using properties passed down to them through
 what are called `props`.
 
-If you open up `/src/components/LocationCard.js` you will see the following:
+If you open up `/src/components/EmployeeListItem.js` you will see the following:
 
 ```
 import React from 'react'
