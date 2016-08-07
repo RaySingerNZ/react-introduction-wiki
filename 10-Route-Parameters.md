@@ -58,8 +58,8 @@ Each class based component (not pure functional stateless ones) has its own loca
 state is as I have in the contructor. If you want to change it anwhere else you should use the `this.setState` function and not directly access to the state. application
 state is a big topic and this tutorial doesn't really delve into it much, just enough to show you how React works.
 
-In the above example I am setting the state equal to an object that has a key `employee` and that is set to the return value of `getEmployee` using the `employeeId` param from the route. In a 
-more serious application you would use a state management system like [Redux](https://github.com/reactjs/redux) to manage this but I am using a mock API to make the example clearer.
+In the above example I am setting the state equal to an object that has a key `employee`. I am seeting `employee` equal to the result of my call to `getEmployee` using the `employeeId` param
+ from the route params. In a more serious application you would use a state management system like [Redux](https://github.com/reactjs/redux) to manage this but I am using a mock API to make the example clearer.
 
 Inside my render function I use the object deconstructor to get all the required fields out of `this.state.employee` that was set in the components contructor. This profile 
 container should probably be broken up into more components, but we will do that shortly. Have a look at how we can so easily replace all our static content with dynamic content
