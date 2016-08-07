@@ -1,7 +1,7 @@
 **A lot of people get put off by React's use of JSX so I thought I would quickly give an introduction to it before we get into the building our first React application.**
 
 ```
-git checkout step-1
+git checkout step-0
 ```
 
 React uses an extended version of JavaScript called JSX. It basically just lets you put html-like markup
