@@ -1,4 +1,4 @@
-```
+``` shell
 git checkout step-2
 ```
 
@@ -6,7 +6,7 @@ Converting out HTML into JSX is pretty straight forward. The main things you nee
 
 Now if you look in `src/App.js` you will see this:
 
-```
+``` javascript
 import React, { Component } from 'react'
 
 class App extends Component {
