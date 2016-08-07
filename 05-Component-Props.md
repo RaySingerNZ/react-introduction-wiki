@@ -2,8 +2,8 @@
 git checkout step-3
 ```
 
-Components have what are called `props` which look a lot like HTML attributes except are camel case
-instead of snake case. For example
+Components have what are called `props` which is how you can pass state around between your components. They look a lot like HTML attributes but are camel case
+instead of snake case. For example:
 
 ``` javascript
 
@@ -11,34 +11,54 @@ instead of snake case. For example
 
 ```
 
-The component would recieve these props like this:
+There are a few ways you can create components. Below is how you use props in the common ones.
+
+**Using a class based component**
 
 ``` javascript
 
-// Using a class based component
-class MyComponent extends Component {
-    constructor(props){
+import React, { Component } from 'react'
 
-    }
-    render(){
+class App extends Component {
+    render()  {
+      return (
         <div>
-            {props.myProp}
+            {this.props.myProp}
         </div>
+      )
     }
 }
 
-//Using a pure function and parameter deconsstruction
-const LocationCard = ({myProp}) => (
-    render(){
-        <div>
-            {myProp}
-        </div>
-    }
+export default App
+```
+**Using a pure function and parameter deconsstruction**
+
+```
+// without using the es6 paramter deconstructor syntax
+const MyComponent = (props) => (
+    <div>
+        {props.myProp}
+    </div>
 )
+
+// using deconstructor syntax
+const MyComponent = ({myProp}) => (
+    <div>
+        {myProp}
+    </div>
+)
+
+const MyComponent = ({myProp, myOtherProp}) => (
+    <div>
+        {myProp} - {myOtherProp}
+    </div>
+)
+
 ```
 
-As you can see you can render values from variables by putting them insdie paretheses `{}`. This can be seen in our app
-in the `LocationCard` component:
+As you can see you can render values from variables by putting them insdie `{}`'s using the same syntax as
+[Tempalte Literals in es2015](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Template_literals). 
+This can be seen in the above examples and in our app in the `EmployeeListItem` component:
 
 ``` javascript
 
