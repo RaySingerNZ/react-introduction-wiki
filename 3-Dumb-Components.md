@@ -2,10 +2,9 @@
 git checkout step-2
 ```
 
-In React there is a general concept of having 'dumb' and 'smart' compeonents, or 'container' and 'presentational'
-components. The distinction is in their relationship with the state of the application.
+A well established pattern in developing scalable React apps is creating a separation between presentational components and container components. This can be thought of also as 'dumb' and 'smart' components.
 
-**Container** components are responsible for orchestrating and retrieving the data. While **presentation**
+**Container** components are responsible for things like orchestrating , initiation and retrieving the data. While **presentation**
 components are simple pure functions that render UI elements using properties passed down to them through
 what are called `props`.
 
