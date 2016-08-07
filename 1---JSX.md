@@ -30,7 +30,9 @@ ReactDOM.render(
 
 ```
 
-This is an extremely simplistic example of JSX and you will see more as we go along. The main thing to note is that for some of the html attributes the name deviates from the name in html. This is because the React team decided to use the [JavaScript DOM API](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) names because it already existed and was in camel case which makes it a lot easier to use in JavaScript (html is snake case).
+This is an extremely simplistic example of JSX and you will see more as we go along. As you can see you can place HTML tags but you can also place your own custom components as JSX as well (more on this later)
+
+The main thing to note is that for some of the html attributes the name deviates from the name in html. This is because the React team decided to use the [JavaScript DOM API](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) names because it already existed and was in camel case which makes it a lot easier to use in JavaScript (html is snake case).
 
 One of the most obvious ones is `class` becomes `className`. For more JSX Gotchas have a look at [this article](https://facebook.github.io/react/docs/jsx-gotchas.html).
 
