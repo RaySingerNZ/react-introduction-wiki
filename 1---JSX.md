@@ -51,3 +51,5 @@ Having our markup in our Javascript has a number of great advantages that are su
 
 All that being said I can see some downsides, the most convincing one is that of deviation from open web standards. That being said other templating engines used in other frameworks do exactly the same thing (just on their html) so I don't really see this as a huge issue.
 
+You can read more about JSX [here in Facebook's in depth guide](https://facebook.github.io/react/docs/jsx-in-depth.html).
+
