@@ -1,10 +1,10 @@
-This wiki and repository has been craeted as an introduction to the main features of [React](https://facebook.github.io/react/) 
+This wiki and repository has been created as an introduction to the main features of [React](https://facebook.github.io/react/) 
 and [React Router](https://github.com/reactjs/react-router). It was created using the [Create React App](https://github.com/facebookincubator/create-react-app)
 
 If you have not already and wish to code along follow the [instructions found in the readme](https://github.com/justsayno/react-introduction).
 
 You can follow along the code changes in each step on your local machine by cloning the repository and checkout out the 
-branch that corresponds to the step in the tutorial. For example to go to the begining run the follwoing in a command window:
+branch that corresponds to the step in the tutorial. For example to go to the begining run the following in a command window:
 
 ``` shell
 git checkout step-0
@@ -28,7 +28,7 @@ npm run static
 This will launch your browser and you can see the static version of the site. If you click on the "View C.V."
 button for the top item you will see the static html version of an employees profile page.
 
-### Project Structrure
+### Project Structure
 
 If you have checkout of the branch `step-0` you will have a project structure like this:
 
@@ -48,7 +48,7 @@ React-Introduction/
  |
  └──....                * Project setup related files
 ```
-*Some detail has been ommitted for clarity*
+*Some detail has been omitted for clarity*
 
 ## The Root Component
 
@@ -56,7 +56,7 @@ The file `src/index.js` is where I bootstrap my employee app. Although (as expla
 does not use HTML templates I need to tell React where in our `index.html` file we would like to render our app.
 
 I've done this using the `ReactDOM` library which is a seperate library to the core React library and allows
-you to render your component heirarchy to a DOM node in your HTML like so:
+you to render your component hierarchy to a DOM node in your HTML like so:
 
 ``` javascript
 import React from 'react'
@@ -99,6 +99,6 @@ If you run `npm start` from your command line then you
 will see this render as a blank page with the "Hello World!" Message at the top left, just like a normal HTML page.
 
 
-This should reload when you make changes or switch branches but sometimes the `create-react-app` build configuration doesn't work and you need to r
-estart it. There are better build systems (or you can create your own) but I'm using the [Create React App](https://github.com/facebookincubator/create-react-app)
+This should reload when you make changes or switch branches but sometimes the `create-react-app` build configuration doesn't work and you need to restart it. 
+There are better build systems (or you can create your own) but I'm using the [Create React App](https://github.com/facebookincubator/create-react-app)
 becuase it keeps all the bundling and non-react noise out of the project.
